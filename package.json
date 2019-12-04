@@ -1,0 +1,24 @@
+{
+  "name": "samplenodejs",
+  "version": "1.0.0",
+  "description": "This is Node JS Hello World Applicaiton",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js",
+    "build": "npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RupaliKaushik/NodeJSHelloWorld.git"
+  },
+  "author": "Rupali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RupaliKaushik/NodeJSHelloWorld/issues"
+  },
+  "homepage": "https://github.com/RupaliKaushik/NodeJSHelloWorld#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

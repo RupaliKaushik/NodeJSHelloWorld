@@ -7,9 +7,10 @@ pipeline{
                         }
              }
              stage('Two'){
-                   steps{
+                  steps{
                          echo "Creating a build"
-                         }
+                        }
+                        npm run build
              }   
             stage('Three'){
                    parallel{
@@ -40,7 +41,7 @@ pipeline{
              
        }
        }
-       
+}
        
                                       
                                       
