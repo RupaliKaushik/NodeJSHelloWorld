@@ -1,28 +1,28 @@
-pipeline{
-    agent any{
-         stages{
+pipeline {
+    agent any
+         stages {
              stage('Checkout'){
-                  steps{
+                  steps {
                         echo "Checking out the file from Github"
                         }
              }
-             stage('Build'){
-                   steps{
+             stage('Build') {
+                   steps {
                          input('Creating a build')
                          }
              }   
-             stage('Test'){
+             stage('Test') {
                    when{
                          not{
                                branch "master"
                             }
                          }
-                    steps{
+                    steps {
                         echo "Running the Unit Tests"
                         }
               }       
-             stage('Parallel'){
-                     parallel{
+             stage('Parallel') {
+                     parallel {
                           stage('Unit Test') {
                                                steps {
                                                         echo "Running the Unit Test"
