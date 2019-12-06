@@ -10,7 +10,7 @@ pipeline {
                   stage('Build') {
                         steps {
                               echo "Creating a build"
-                              sh "npm config ls"
+                              sh "npm install"
                         }             
                   }   
                   stage('Test') {
