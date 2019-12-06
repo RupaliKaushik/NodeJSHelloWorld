@@ -10,6 +10,7 @@ pipeline {
                    steps {
                          input('Creating a build')
                          }
+                         sh 'npm run build'
              }   
              stage('Test') {
                    when{
@@ -21,22 +22,15 @@ pipeline {
                         echo "Running the Unit Tests"
                         }
               }       
-             stage('Parallel') {
-                     parallel {
-                          stage('Unit Test') {
-                                               steps {
-                                                        echo "Running the Unit Test"
-                                                      }
-                                              }
-                          stage('Integration Test') { 
-                                                  
-                                                steps {
-                                                        echo "Running the Integration Test"
-                                                      }
-
-                                        }
-                                      }
-       }
-       }
-       }
-       }
+             stage('Deploy') { 
+                              steps {
+                                    echo "Deploying the code"
+                                     }
+                              }
+                          
+                        }
+                  }
+       
+       
+       
+       
