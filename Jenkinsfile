@@ -8,9 +8,11 @@ pipeline {
              }
              stage('Build') {
                    steps {
-                         input('Creating a build')
+                         echo "Creating a build"
+                         sh "npm run build"
                          }
-                         sh 'npm run build'
+
+                         
              }   
              stage('Test') {
                    when{
