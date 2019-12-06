@@ -10,29 +10,24 @@ pipeline {
              stage('Build') {
                    steps {
                          echo "Creating a build"
-                         sh "npm install"
+                         sh "npm config ls"
                          }
 
                          
              }   
              stage('Test') {
-                   when{
-                         not{
-                               branch "master"
-                            }
-                         }
-                    steps {
+                  steps {
                         echo "Running the Unit Tests"
-                        }
-              }       
-             stage('Deploy') { 
-                              steps {
-                                    echo "Deploying the code"
-                                     }
-                              }
-                          
+                  }
+            }       
+            stage('Deploy') { 
+                  steps {
+                        echo "Deploying the code"
                         }
                   }
+                        
+            }
+      }
        
        
        
